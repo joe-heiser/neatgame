@@ -12,6 +12,7 @@ public enemy(String name, int damage, int health) {
 	this.name = name;
 	this.health = health;
 	this.damage = damage;
+	this.accuracy = 100;
 }
 
 public enemy(String name, int damage) {
