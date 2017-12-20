@@ -19,8 +19,9 @@ public enemy(String name, int damage) {
 	this.health = 100;
 	this.damage = damage;
 }
-public void attack(Player name) {
+public void attack(Player p) {
 	Random rand = new Random();
+	p.takeDamage(this.damage);
 
 }
 }
