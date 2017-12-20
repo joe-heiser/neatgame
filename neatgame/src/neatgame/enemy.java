@@ -21,7 +21,7 @@ public enemy(String name, int damage) {
 }
 public void attack(Player p) {
 	Random rand = new Random();
-	if(this.accuracy <= rand.nextInt(100)+1) {
+	if(this.accuracy >= rand.nextInt(100)+1) {
 	p.takeDamage(this.damage);
 	//hit
 	}
