@@ -42,6 +42,8 @@ public class Gui extends JFrame {
     	
     	JLabel health = new JLabel(p1.toString());
     	
+    	JLabel hm = new JLabel("Hit or miss");
+    	
     	
     	
     	healButton.addActionListener((ActionEvent event) -> {
@@ -55,8 +57,8 @@ public class Gui extends JFrame {
         });
     	
     	attackButton.addActionListener((ActionEvent event) -> {
-            e1.attack(p1);
             health.setText(p1.toString());
+            hm.setText(e1.attack(p1));
         });
     	
     	frame.addWindowListener(new WindowAdapter() {
@@ -69,6 +71,7 @@ public class Gui extends JFrame {
     	panel.add(attackButton);
     	panel.add(damageButton);
     	panel.add(health);
+    	panel.add(hm);
     	frame.setPreferredSize(new Dimension(800,600));
     	frame.setContentPane(panel);
     	frame.pack();
