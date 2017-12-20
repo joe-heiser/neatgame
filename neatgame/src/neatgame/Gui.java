@@ -24,15 +24,15 @@ public class Gui extends JFrame {
     	
     	Player p1 =  new Player("Jeffy",50,10);
     	
-    	JFrame frame = new JFrame("test");
+    	JFrame frame = new JFrame("Kill Jeffy");
     	
     	JPanel panel = new JPanel(new GridLayout(4,4,4,4));
     	
     	JButton healButton = new JButton("Heal");
-    	healButton.setPreferredSize(new Dimension(50,50));
+    	healButton.setPreferredSize(new Dimension(50,60));
     	
-    	JButton damageButton = new JButton("Damage");
-    	healButton.setPreferredSize(new Dimension(50,50));
+    	JButton damageButton = new JButton("Damage 10 HP");
+    	healButton.setPreferredSize(new Dimension(50,60));
     	
     	JLabel health = new JLabel(p1.toString());
     	
@@ -55,18 +55,15 @@ public class Gui extends JFrame {
     	frame.pack();
     	frame.setVisible(true);
     	       
-        setTitle("Neat Game");
-        setSize(800, 600);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
     }
 
     public static void main(String[] args) {
 
-        EventQueue.invokeLater(() -> {
+        
             Gui ex = new Gui();
-            ex.setVisible(true);
-        });
+            
+        
     }
 
 }
