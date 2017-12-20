@@ -53,6 +53,8 @@ public class Gui extends JFrame {
     	
     	JScrollPane pane = new JScrollPane(list);
     	
+    	
+    	
     	healButton.addActionListener((ActionEvent event) -> {
             p1.heal();
             health.setText(p1.toString());
@@ -65,8 +67,7 @@ public class Gui extends JFrame {
     	
     	attackButton.addActionListener((ActionEvent event) -> {            
             model.addElement(e1.attack(p1));
-            health.setText(p1.toString());
-            
+            health.setText(p1.toString());            
         });
     	
     	frame.addWindowListener(new WindowAdapter() {
