@@ -25,7 +25,7 @@ public class Gui extends JFrame {
     private void initUI() {
     	
     	Player p1 =  new Player("Jeffy",50,10);
-    	//Enemy e1 =  new Enemy("Nigger",50,10);
+    	Enemy e1 =  new Enemy("Nigger",50,10);
 
     	
     	JFrame frame = new JFrame("Kill Jeffy");
@@ -38,7 +38,7 @@ public class Gui extends JFrame {
     	JButton damageButton = new JButton("Damage 10 HP");
     	//healButton.setPreferredSize(new Dimension(50,60));
     	
-    	JButton attackButton = new JButton("Heal");
+    	JButton attackButton = new JButton("Attack Jeffy");
     	
     	JLabel health = new JLabel(p1.toString());
     	
@@ -55,7 +55,7 @@ public class Gui extends JFrame {
         });
     	
     	attackButton.addActionListener((ActionEvent event) -> {
-            p1.takeDamage(10);
+            e1.attack(p1);
             health.setText(p1.toString());
         });
     	
@@ -66,6 +66,7 @@ public class Gui extends JFrame {
     		});
     	
     	panel.add(healButton);
+    	panel.add(attackButton);
     	panel.add(damageButton);
     	panel.add(health);
     	frame.setPreferredSize(new Dimension(800,600));
