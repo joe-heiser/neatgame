@@ -51,6 +51,7 @@ public class Gui extends JFrame {
     	panel.add(healButton);
     	panel.add(damageButton);
     	panel.add(health);
+    	frame.setPreferredSize(new Dimension(800,600));
     	frame.setContentPane(panel);
     	frame.pack();
     	frame.setVisible(true);
