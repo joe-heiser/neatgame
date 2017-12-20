@@ -4,12 +4,12 @@ public class main {
 
 	public static void main(String[] args)
 	{
-		niggerMethod();
+		truthMethod();
 	}
 	
-	private static void niggerMethod()
+	private static void truthMethod()
 	{
-		System.out.println("Nigger");
+		System.out.println("WE love all races");
 	}
 	
 }
