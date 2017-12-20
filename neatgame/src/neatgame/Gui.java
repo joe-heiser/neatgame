@@ -8,12 +8,15 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import javax.swing.AbstractButton;
+import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 public class Gui extends JFrame {
 	
@@ -45,6 +48,10 @@ public class Gui extends JFrame {
     	JLabel hm = new JLabel("Hit or miss");
     	
     	
+    	DefaultListModel model = new DefaultListModel();
+    	JList list = new JList(model);
+    	
+    	JScrollPane pane = new JScrollPane(list);
     	
     	healButton.addActionListener((ActionEvent event) -> {
             p1.heal();
@@ -57,8 +64,9 @@ public class Gui extends JFrame {
         });
     	
     	attackButton.addActionListener((ActionEvent event) -> {            
-            hm.setText(e1.attack(p1));
+            model.addElement(e1.attack(p1));
             health.setText(p1.toString());
+            
         });
     	
     	frame.addWindowListener(new WindowAdapter() {
@@ -72,6 +80,7 @@ public class Gui extends JFrame {
     	panel.add(damageButton);
     	panel.add(health);
     	panel.add(hm);
+    	panel.add(pane);
     	frame.setPreferredSize(new Dimension(800,600));
     	frame.setContentPane(panel);
     	frame.pack();
