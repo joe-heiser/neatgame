@@ -12,4 +12,9 @@ public class main {
 		System.out.println("Nigger");
 	}
 	
+	private static void niggerHateMethod()
+	{
+		System.out.println("Kill all the niggers");
+	}
+	
 }
