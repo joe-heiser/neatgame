@@ -1,10 +1,12 @@
 package neatgame;
 
 public class Player {
+	private String name;
 	private int health;
 	private int coin;
 
-	public Player(int health, int coin) {
+	public Player(String name, int health, int coin) {
+		this.name = name;
 		this.health = health;
 		this.coin = coin;
 	}
