@@ -1,9 +1,13 @@
 package neatgame;
 
+import java.util.Random;
+
 public class Player {
 	private String name;
 	private int health;
 	private int coin;
+	private int accuracy = 100;
+	private int damage = 2;
 
 	public Player(String name, int health, int coin) {
 		this.name = name;
@@ -34,6 +38,20 @@ public class Player {
 			this.health = 0;
 			this.coin = 666;
 		}
+	}
+	
+	public String attack(Enemy e) {
+		Random rand = new Random();
+		if(this.accuracy >= rand.nextInt(100)+1 ) {
+			e.takeDamage(this.damage);
+			return this.name + " Hit his attack on the enemy!";
+		}
+		else
+		{
+			return this.name + " Missed his attack on the enemy!";
+		}
+
+
 	}
 	
 
