@@ -6,7 +6,7 @@ public class enemy{
 private String name;
 private int health;
 private int damage;
-private double accuracy;
+private int accuracy;
 
 public enemy(String name, int damage, int health) {
 	this.name = name;
