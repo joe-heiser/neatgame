@@ -6,7 +6,8 @@ public class game {
 	{
 	 Player p1 =  new Player("Jeffy");
 	 p1.TakeDamage(100);
-	 p1.toString();
+	 System.out.print(p1.toString());
+	 
 	}
 
 }

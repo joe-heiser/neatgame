@@ -29,7 +29,7 @@ public class Player {
 
 	public void TakeDamage(int damage) {
 		this.health -= damage;
-		if (health < 0) {
+		if (health <= 0) {
 			this.name = "who cares this nigga dead";
 			this.health = 0;
 			this.coin = 666;
