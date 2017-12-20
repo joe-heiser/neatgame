@@ -30,11 +30,12 @@ public class Player {
 	public void TakeDamage(int damage) {
 		this.health -= damage;
 		if (health <= 0) {
-			this.name = "who cares this nigga dead";
+			this.name = "DEAD";
 			this.health = 0;
 			this.coin = 666;
 		}
 	}
+	
 
 	@Override
 	public String toString() {
