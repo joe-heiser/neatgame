@@ -25,7 +25,7 @@ public class Gui extends JFrame {
     private void initUI() {
     	
     	Player p1 =  new Player("Jeffy",50,10);
-    	Enemy e1 =  new Enemy("Nigger",50,10);
+    	Enemy e1 =  new Enemy("Nigger",15,50);
 
     	
     	JFrame frame = new JFrame("Kill Jeffy");
