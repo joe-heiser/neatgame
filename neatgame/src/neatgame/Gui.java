@@ -64,7 +64,6 @@ public class Gui extends JFrame {
     	frame.setContentPane(panel);
     	frame.pack();
     	frame.setVisible(true);
- 
         
     }
 
