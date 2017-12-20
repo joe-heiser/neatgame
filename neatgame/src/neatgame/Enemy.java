@@ -13,15 +13,15 @@ public Enemy(String name, int damage, int accuracy) {
 }
 
 
-public void attack(Player p) {
+public String attack(Player p) {
 	Random rand = new Random();
 	if(this.accuracy >= rand.nextInt(100)+1 ) {
 		p.takeDamage(this.damage);
-		//hit
+		return this.name + " Hit his attack on Jeffy!";
 	}
 	else
 	{
-		//miss
+		return this.name + " Missed his attack on Jeffy!";
 	}
 
 
