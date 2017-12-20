@@ -31,6 +31,9 @@ public class Gui extends JFrame {
     	JButton healButton = new JButton("Heal");
     	healButton.setPreferredSize(new Dimension(50,50));
     	
+    	JButton damageButton = new JButton("Damage");
+    	healButton.setPreferredSize(new Dimension(50,50));
+    	
     	JLabel health = new JLabel(p1.toString());
     	
     	
@@ -40,8 +43,13 @@ public class Gui extends JFrame {
             health.setText(p1.toString());
         });
     	
+    	damageButton.addActionListener((ActionEvent event) -> {
+            p1.takeDamage(10);
+            health.setText(p1.toString());
+        });
     	
     	panel.add(healButton);
+    	panel.add(damageButton);
     	panel.add(health);
     	frame.setContentPane(panel);
     	frame.pack();

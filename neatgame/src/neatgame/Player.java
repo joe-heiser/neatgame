@@ -27,7 +27,7 @@ public class Player {
 
 	}
 
-	public void TakeDamage(int damage) {
+	public void takeDamage(int damage) {
 		this.health -= damage;
 		if (health <= 0) {
 			this.name = "DEAD";
