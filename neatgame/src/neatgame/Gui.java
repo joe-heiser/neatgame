@@ -1,22 +1,8 @@
 package neatgame;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.EventQueue;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
-import javax.swing.AbstractButton;
-import javax.swing.DefaultListModel;
-import javax.swing.GroupLayout;
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 public class Gui extends JFrame {
 	
