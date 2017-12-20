@@ -1,9 +1,12 @@
 package neatgame;
 
-public class enemy {
+import java.util.Random;
+
+public class enemy{
 private String name;
 private int health;
 private int damage;
+private double accuracy;
 
 public enemy(String name, int damage, int health) {
 	this.name = name;
@@ -17,8 +20,7 @@ public enemy(String name, int damage) {
 	this.damage = damage;
 }
 public void attack(Player name) {
-	
+	Random rand = new Random();
+
 }
-
-
 }
