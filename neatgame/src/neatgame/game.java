@@ -8,6 +8,8 @@ public class game {
 	 p1.takeDamage(100);
 	 System.out.print(p1.toString());
 	 
+	 Gui ex = new Gui();
+	 
 	}
 
 }
