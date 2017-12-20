@@ -39,16 +39,22 @@ public class Player {
 			this.coin = 666;
 		}
 	}
+	public int getHealth() {
+		return health;
+	}
 	
 	public String attack(Enemy e) {
 		Random rand = new Random();
-		if(this.accuracy >= rand.nextInt(100)+1 ) {
+		if(this.accuracy >= rand.nextInt(100)+1 && e.getHealth() > 0) {
 			e.takeDamage(this.damage);
 			return this.name + " Hit his attack on the enemy!";
 		}
-		else
+		else if(e.getHealth() > 0)
 		{
 			return this.name + " Missed his attack on the enemy!";
+		}
+		else {
+			return "that nigga dead";
 		}
 
 
