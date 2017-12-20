@@ -11,6 +11,12 @@ public class Player {
 		this.coin = coin;
 	}
 
+	public Player(String name) {
+		this.name = name;
+		this.health = 100;
+		this.coin = 100;
+	}
+
 	public void heal() {
 		if (this.health > 0) {
 			this.health += 20;
@@ -19,6 +25,20 @@ public class Player {
 			this.health = 100;
 		}
 
+	}
+
+	public void TakeDamage(int damage) {
+		this.health -= damage;
+		if (health < 0) {
+			this.name = "who cares this nigga dead";
+			this.health = 0;
+			this.coin = 666;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Player [name=" + name + ", health=" + health + ", coin=" + coin + "]";
 	}
 
 }
