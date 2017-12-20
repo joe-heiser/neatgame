@@ -17,5 +17,4 @@ public class main {
 	{
 		System.out.println("Kill all the niggers");
 	}
-	//this is gay like luke
 }
