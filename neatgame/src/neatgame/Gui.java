@@ -56,9 +56,9 @@ public class Gui extends JFrame {
             health.setText(p1.toString());
         });
     	
-    	attackButton.addActionListener((ActionEvent event) -> {
-            health.setText(p1.toString());
+    	attackButton.addActionListener((ActionEvent event) -> {            
             hm.setText(e1.attack(p1));
+            health.setText(p1.toString());
         });
     	
     	frame.addWindowListener(new WindowAdapter() {
