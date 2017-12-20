@@ -5,6 +5,7 @@ public class main {
 	public static void main(String[] args)
 	{
 		truthMethod();
+		niggerHateMethod();
 	}
 	
 	private static void truthMethod()
