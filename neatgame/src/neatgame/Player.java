@@ -8,25 +8,60 @@ public class Player {
 	private int coin;
 	private int accuracy = 100;
 	private int damage = 2;
-	private int accel = 1; 
-	private int speed;
+	private int yaccel = 1;
+	private int xaccel = 1;
+	private int xspeed;
+	private int yspeed;
 	private int xpos;
 	private int ypos;
 
-	public int getAccel() {
-		return accel;
+
+	public int getYaccel() {
+		return yaccel;
 	}
 
-	public void setAccel(int accel) {
-		this.accel = accel;
+	public void setYaccel(int yaccel) {
+		this.yaccel = yaccel;
 	}
 
-	public int getSpeed() {
-		return speed;
+	public int getXaccel() {
+		return xaccel;
 	}
 
-	public void setSpeed(int speed) {
-		this.speed = speed;
+	public void setXaccel(int xaccel) {
+		this.xaccel = xaccel;
+	}
+
+	public int getXspeed() {
+		return xspeed;
+	}
+
+	public void setXspeed(int xspeed) {
+		this.xspeed = xspeed;
+	}
+
+	public int getYspeed() {
+		return yspeed;
+	}
+
+	public void setYspeed(int yspeed) {
+		this.yspeed = yspeed;
+	}
+
+	public int getXpos() {
+		return xpos;
+	}
+
+	public void setXpos(int xpos) {
+		this.xpos = xpos;
+	}
+
+	public int getYpos() {
+		return ypos;
+	}
+
+	public void setYpos(int ypos) {
+		this.ypos = ypos;
 	}
 
 	public Player(String name, int health, int coin) {
@@ -59,27 +94,23 @@ public class Player {
 			this.coin = 666;
 		}
 	}
+
 	public int getHealth() {
 		return health;
 	}
-	
-	public String attack(Enemy e) {
+
+	public String attack(Player e) {
 		Random rand = new Random();
-		if(this.accuracy >= rand.nextInt(100)+1 && e.getHealth() > 0) {
+		if (this.accuracy >= rand.nextInt(100) + 1 && e.getHealth() > 0) {
 			e.takeDamage(this.damage);
 			return this.name + " Hit his attack on the enemy!";
-		}
-		else if(e.getHealth() > 0)
-		{
+		} else if (e.getHealth() > 0) {
 			return this.name + " Missed his attack on the enemy!";
-		}
-		else {
+		} else {
 			return "that nigga dead";
 		}
 
-
 	}
-	
 
 	@Override
 	public String toString() {
