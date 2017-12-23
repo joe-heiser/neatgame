@@ -6,7 +6,8 @@ public class game {
 	{
 	 final double GRAVITY  = 9.8;
 	 
-	 
+	 Player p1 =  new Player("Jeffy");
+	 Gui ex = new Gui();
 	
 	 
 	}
