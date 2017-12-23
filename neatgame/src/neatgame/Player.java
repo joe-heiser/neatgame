@@ -1,7 +1,7 @@
 package neatgame;
 
 import java.util.Random;
-import java.math.*;
+
 
 public class Player {
 	private String name;
