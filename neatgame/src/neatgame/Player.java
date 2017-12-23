@@ -1,6 +1,7 @@
 package neatgame;
 
 import java.util.Random;
+import java.math.*;
 
 public class Player {
 	private String name;
@@ -8,26 +9,65 @@ public class Player {
 	private int coin;
 	private int accuracy = 100;
 	private int damage = 2;
-	private int accel = 1; 
-	private int speed;
-	private int xpos;
-	private int ypos;
-
-	public int getAccel() {
-		return accel;
+	private int xAccel;
+	private int yAccel;
+	private int xPos;
+	private int yPos;
+	private int xVel;
+	private int yVel;
+	
+	public int getxAccel() {
+		return xAccel;
 	}
 
-	public void setAccel(int accel) {
-		this.accel = accel;
+	public void setxAccel(int xAccel) {
+		this.xAccel = xAccel;
+	}
+	
+	public int getyAccel() {
+		return yAccel;
 	}
 
-	public int getSpeed() {
-		return speed;
+	public void setyAccel(int yAccel) {
+		this.yAccel = yAccel;
+	}
+	
+	public int getxVel() {
+		return xVel;
 	}
 
-	public void setSpeed(int speed) {
-		this.speed = speed;
+	public void setxVel(int xVel) {
+		this.xVel = xVel;
 	}
+	
+	public int getyVel() {
+		return yVel;
+	}
+
+	public void setyVel(int yVel) {
+		this.yVel = yVel;
+	}
+	
+	public int getxPos() {
+		return xPos;
+	}
+
+	public void setxPos(int xPos) {
+		this.xPos = xPos;
+	}
+	
+	public int getyPos() {
+		return yPos;
+	}
+
+	public void setyPos(int yPos) {
+		this.yPos = yPos;
+	}
+
+	
+
+
+	
 
 	public Player(String name, int health, int coin) {
 		this.name = name;
