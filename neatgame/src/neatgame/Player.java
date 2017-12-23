@@ -11,6 +11,23 @@ public class Player {
 	private int accel = 1; 
 	private int speed;
 	private int xpos;
+	public int getXpos() {
+		return xpos;
+	}
+
+	public void setXpos(int xpos) {
+		this.xpos = xpos;
+	}
+
+	public int getYpos() {
+		return ypos;
+	}
+
+	public void setYpos(int ypos) {
+		this.ypos = ypos;
+	}
+
+
 	private int ypos;
 
 	public int getAccel() {
