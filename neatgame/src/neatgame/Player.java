@@ -8,10 +8,45 @@ public class Player {
 	private int coin;
 	private int accuracy = 100;
 	private int damage = 2;
-	private int accel = 1;
-	private int speed;
+	private int yaccel = 1;
+	private int xaccel = 1;
+	private int xspeed;
+	private int yspeed;
 	private int xpos;
 	private int ypos;
+
+
+	public int getYaccel() {
+		return yaccel;
+	}
+
+	public void setYaccel(int yaccel) {
+		this.yaccel = yaccel;
+	}
+
+	public int getXaccel() {
+		return xaccel;
+	}
+
+	public void setXaccel(int xaccel) {
+		this.xaccel = xaccel;
+	}
+
+	public int getXspeed() {
+		return xspeed;
+	}
+
+	public void setXspeed(int xspeed) {
+		this.xspeed = xspeed;
+	}
+
+	public int getYspeed() {
+		return yspeed;
+	}
+
+	public void setYspeed(int yspeed) {
+		this.yspeed = yspeed;
+	}
 
 	public int getXpos() {
 		return xpos;
@@ -27,22 +62,6 @@ public class Player {
 
 	public void setYpos(int ypos) {
 		this.ypos = ypos;
-	}
-
-	public int getAccel() {
-		return accel;
-	}
-
-	public void setAccel(int accel) {
-		this.accel = accel;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public void setSpeed(int speed) {
-		this.speed = speed;
 	}
 
 	public Player(String name, int health, int coin) {
