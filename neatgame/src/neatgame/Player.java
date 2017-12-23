@@ -99,7 +99,7 @@ public class Player {
 		return health;
 	}
 
-	public String attack(Enemy e) {
+	public String attack(Player e) {
 		Random rand = new Random();
 		if (this.accuracy >= rand.nextInt(100) + 1 && e.getHealth() > 0) {
 			e.takeDamage(this.damage);
