@@ -8,6 +8,26 @@ public class Player {
 	private int coin;
 	private int accuracy = 100;
 	private int damage = 2;
+	private int accel = 1; 
+	private int speed;
+	private int xpos;
+	private int ypos;
+
+	public int getAccel() {
+		return accel;
+	}
+
+	public void setAccel(int accel) {
+		this.accel = accel;
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
 
 	public Player(String name, int health, int coin) {
 		this.name = name;
